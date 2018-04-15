@@ -1,0 +1,64 @@
+<%load static%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/bootstrap/css/bootstrap.min.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/bootstrap/css/bootstrap-rtl.min.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/css/style.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/css/font.css') }">
+    <title> List of Product </title>
+</head>
+<body>
+
+<!-- Start top Navbar-->
+        <header>
+
+             <nav class="navbar navbar-default Roya">
+              <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">صفحه اصلی</a></li>
+                  <li><a href="/productInsert">افزودن محصول </a></li>
+              </div>
+             </nav>
+        </header>
+    <section class="container">
+
+      <div class="row">
+      <div class="col-sm-8">
+
+        <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>شناسه</th>
+            <th>نام</th>
+              <th>قیمت</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+        <tbody tal:repeat="ProductList ProductList">
+          <tr>
+            <td>${ProductList.product_id}</td>
+            <td>${ProductList.Pname}</td>
+              <td>${ProductList.price}</td>
+            <td>
+                <!--
+                ?<a href="${request.route_url('productEdit', id=ProductList.product_id)}">ویرایش</a>
+                ?<a href="${request.route_url('productDel', id=ProductList.product_id)}">حذف</a>
+                -->
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      </div>
+
+        </div>
+        <hr>
+
+    </section>
+<script src="${request.static_url('tutorial:templates/bootstrap/jquery-2.2.2.min.js') }"></script>
+<script src="${request.static_url('tutorial:templates/bootstrap/js/bootstrap.min.js') }"></script>
+</body>
+</html>

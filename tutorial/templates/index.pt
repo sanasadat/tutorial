@@ -1,0 +1,204 @@
+<%load static%><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/bootstrap/css/bootstrap.min.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/bootstrap/css/bootstrap-rtl.min.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/css/style.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/css/style.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/css/font.css') }">
+    <title></title>
+</head>
+<body>
+
+<!-- Start top Navbar-->
+        <header>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">محل ارم فروشگاه</a>
+            </div>
+            <div class="collapse navbar-collapse Roya" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-home icon-mid"></span> صفحه اصلي </a></li>
+                <li data-toggle="modal" data-target="#about"><a href="#"><span class="glyphicon glyphicon-info-sign icon-mid"></span> درباره ما</a></li>
+                <li data-toggle="modal" data-target="#contact"><a href="#"><span class="glyphicon glyphicon-envelope icon-mid"></span> تماس با ما</a></li>
+                <li><form class="form-inline" STYLE="margin-top: 5%; margin-right: 15%">
+                         <input type="search" class="form-control" size="20" placeholder="search">
+                         <button type="button" class="btn btn-danger RoyaBold">جستجو
+                <span class="glyphicon glyphicon-search"></span>
+                </button>
+                </form></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-left">
+                <li><a href="/login"><span class="glyphicon glyphicon-log-in icon-mid"></span> ورود</a></li>
+                <li><a href="/reg"><span class="glyphicon glyphicon-user icon-mid"></span> عضويت</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+            <div id="about" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">درباره ما</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                        فروشگاه <b>ويترين ديجيتال</b> از سال گذشته فعاليت خود را شروع کرده و تاکنون در زمينه ارائه محصولات ديجيتالي در کشور پيشگام بوده است.
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div id="contact" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">تماس با ما</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                        ايميل: info@vitrin.ir
+                        <br>
+                        شماره تماس: 06532561320
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="jumbotron" style="background-color: #fff">
+              <div class="container text-center RoyaBold">
+                <h1>فروشگاه اينترنتي</h1>
+                <p>خوش آمديد</p>
+              </div>
+            </div>
+        </header>
+    <section class="container">
+
+      <div class="row">
+      <div class="col-sm-8">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" style="box-shadow: 1px 5px 5px grey">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <img src="${request.static_url('tutorial:templates/img/slider/1.jpg') }" alt="Image">
+              <div class="carousel-caption">
+                <h3>زيورآلات</h3>
+                <p>با بهترين قيمت</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <img src="${request.static_url('tutorial:templates/img/slider/2.jpg') }" alt="Image">
+              <div class="carousel-caption">
+                <h3>بهترين گوشي ها</h3>
+                <p>با تخفيف ويژه</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">قبلي</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">بعدي</span>
+          </a>
+        </div>
+          <div class="well well-sm"><img width="100%" src="${request.static_url('tutorial:templates/img/slider/bottom.jpg') }"></div>
+          <!-- Box Shegeft angiz-->
+          <div class="panel panel-success text-center RoyaBold">
+            <div class="panel-heading">
+                <h4>پيشنهاد شگفت انگيز</h4>
+            </div>
+            <div class="panel-body">Panel Content</div>
+          </div>
+
+          <div class="panel panel-default text-center RoyaBold">
+            <div class="panel-heading">
+                <h4>جديدترين محصولات</h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="row">
+                        <div tal:repaet="ProductList ProductList" class="col-sm-2"
+                      <img src="&{request.static_url(productList.pic)}" class="img-responsive" style="width:100%" alt="Image">
+                      <a href=""> <p>&{productlist.Pname}</p> </a>
+                    </div>
+                </div>
+            </div>
+      </div>
+      </div>
+          <!--sidebar start-->
+          <div class="col-sm-4">
+            <div class="panel panel-default">
+              <div class="panel-heading RoyaBold">مجله خبري</div>
+              <div class="panel-body">
+                  <img src="${request.static_url('tutorial:templates/img/brand/Huawei-Brand.jpg') }" class="img-responsive img-circle" style="width:30%;height: 30%" alt="Image">
+                  <p class="text-center Yekan">کمپاني هواوي مدل جديد گوشي خود را معرفي کرد</p>
+              </div>
+              <div class="panel-body">
+                  <img src="${request.static_url('tutorial:templates/img/brand/ADATA_4CAB120757434CA291489929AB7A2652.jpg') }" class="img-responsive img-circle" style="width:30%;height: 30%" alt="Image">
+                  <p class="text-center Yekan">هارد هاي 2 ترابايتي اي ديتا به بازار آمد</p>
+              </div>
+              <div class="panel-footer">ادامه..</div>
+            </div>
+
+            <div class="panel panel-default">
+              <div class="panel-heading RoyaBold">پر فروش ترين محصولات</div>
+              <div class="panel-body">
+                  <img src="${request.static_url('tutorial:templates/img/products/Huawei-Honor-4X-Dual-SIM82da91.jpg') }" class="img-responsive thumbnail center-block" style="width:30%;height: 30%" alt="Image">
+                  <p class="text-center">Huawei Honor 4X</p>
+              </div>
+                <hr>
+              <div class="panel-footer">ادامه..</div>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <footer>
+        <div class="well well-lg RoyaBold" style="background-color: #a0a4a0;color: #ffffff">
+            <h4>? روز هفته، ?? ساعته پاسخگوي شما هستيم.</h4>
+            <h4>تلفن تماس: 02333432323</h4>
+            <h5 style="padding-right: 80%">مارا در شبکه هاي اجتماعي دنبال کنيد:</h5>
+            <img class="pull-left"  src="${request.static_url('tutorial:templates/img/icon/glyphicons-social-32-twitter.png') }">
+            <img class="pull-left" style="padding-left: 2px" src="${request.static_url('tutorial:templates/img/icon/glyphicons-social-33-instagram.png') }">
+        </div>
+        </footer>
+
+    </section>
+<script src="${request.static_url('tutorial:templates/bootstrap/jquery-2.2.2.min.js') }"></script>
+<script src="${request.static_url('tutorial:templates/bootstrap/js/bootstrap.min.js') }"></script>
+</body>
+</html>

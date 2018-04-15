@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/bootstrap/css/bootstrap.min.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/bootstrap/css/bootstrap-rtl.min.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/css/style.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/css/font.css') }">
+    <title>صفحه مدیریت</title>
+</head>
+<body>
+
+<!-- Start top Navbar-->
+        <header>
+
+             <nav class="navbar navbar-default Roya">
+              <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">صفحه اصلی</a></li>
+
+
+              </div>
+             </nav>
+        </header>
+    <section class="container">
+
+      <div class="row">
+      <div class="col-sm-8">
+          <div class="well well-sm RoyaBold" style="background-color: #ffc8b9;border: solid 1px #ff0a00">
+به پنل مدیریت خوش امدید
+          </div>
+          <!-- Box Shegeft angiz-->
+          <div class="col-sm-4">
+            <div class="panel panel-default">
+              <div class="panel-heading RoyaBold">ابزار</div>
+              <div class="panel-body">
+                  <a href="/productInsert">
+                  <p class="text-center Yekan">افزودن محصول</p>
+                  </a>
+              </div>
+              <div class="panel-body">
+                  <a href="/productList">
+                  <p class="text-center Yekan">لیست محصولات</p>
+                  </a>
+              </div>
+              <div class="panel-body">
+                  <p class="text-center Yekan">افزودن دسته بندی</p>
+              </div>
+              <div class="panel-body">
+                  <p class="text-center Yekan">دسته بندی ها</p>
+              </div>
+              <div class="panel-body">
+                  <p class="text-center Yekan">کاربران</p>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+        </div>
+        <hr>
+
+
+    </section>
+<script src="${request.static_url('tutorial:templates/bootstrap/jquery-2.2.2.min.js') }"></script>
+<script src="${request.static_url('tutorial:templates/bootstrap/js/bootstrap.min.js') }"></script>
+</body>
+</html>

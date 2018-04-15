@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/bootstrap/css/bootstrap.min.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/bootstrap/css/bootstrap-rtl.min.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/css/style.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/css/font.css') }">
+    <script src="${request.static_url('tutorial:templates/ckeditor/ckeditor.js') }"></script>
+    <title> Insert </title>
+</head>
+<body>
+
+<!-- Start top Navbar-->
+        <header>
+
+             <nav class="navbar navbar-default Roya">
+              <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">صفحه اصلی</a></li>
+                  <li><a href="#">نمایش لیست محصولات</a></li>
+                </ul>
+              </div>
+             </nav>
+        </header>
+    <section class="container">
+
+      <div class="row">
+      <div class="col-sm-8">
+
+        <section class="container">
+         <form role="form" method="post" accept-charset="utf-8" enctype="multipart/form-data">
+          <div class="form-group has-success col-md-5">
+            <label for="Pname">نام محصول</label>
+            <input name="Pname" type="text" class="form-control" id="Pname" value="${Pname}">
+          </div>
+          <br><br><br><br>
+          <div class="form-group">
+            <label for="tozihat">توضیحات</label>
+            <textarea name="tozihat" id="tozihat" rows="10" cols="80">
+            ${tozihat}
+            </textarea>
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'tozihat' );
+            </script>
+          </div>
+          <div class="row">
+          <div class="form-group col-md-4">
+            <label for="aks">عکس محصول</label>
+            <label class="file">
+              <input type="file" id="aks" name="aks" value="${aks}">
+              <span class="file-custom"></span>
+            </label>
+          </div>
+          </div>
+          <div class="form-group col-sm-6">
+            <label for="price">قیمت</label>
+            <input type="text" class="form-control" name="price" id="price" value="${price}">
+          </div>
+          <div class="row">
+              <div class="form-group col-md-4">
+                <label for="state">وضعیت</label>
+                <select name="state" class="c-select">
+                  <option selected>فعال</option>
+                  <option value="1">غیرفعال</option>
+                  <option value="2">بزودی</option>
+                </select>
+              </div>
+          </div>
+          <button name="submitProductEdit" type="submit" class="btn btn-success">ثبت محصول</button>
+        </form>
+    </section>
+
+      </div>
+
+        </div>
+        <hr>
+
+    </section>
+<script src="${request.static_url('tutorial:templates/bootstrap/jquery-2.2.2.min.js') }"></script>
+<script src="${request.static_url('tutorial:templates/bootstrap/js/bootstrap.min.js') }"></script>
+</body>
+</html>

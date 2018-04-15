@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/bootstrap/css/bootstrap.min.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/bootstrap/css/bootstrap-rtl.min.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/css/style.css') }">
+    <link rel="stylesheet" href="${request.static_url('tutorial:templates/css/font.css') }">
+    <title> Product </title>
+</head>
+<body>
+
+<!-- Start top Navbar-->
+        <header>
+
+             <nav class="navbar navbar-default Roya">
+              <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">صفحه اصلی</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">پکیج های آموزشی
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">آموزش شبکه</a></li>
+                      <li><a href="#">آموزش طراحی وب</a></li>
+                      <li><a href="#">Page 1-3</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">بسته های آموزشی جدید</a></li>
+                  <li><a href="#">بسته های شامل تخفیف</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-left">
+                    <li><button type="button" class="btn btn-success" style="margin-top: 15%">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        سبد خرید</button>
+                    </li>
+                    <li><form class="form-inline" STYLE="margin-top: 5%; margin-right: 15%">
+                         <input type="search" class="form-control" size="20" placeholder="search">
+                         <button type="button" class="btn btn-danger RoyaBold">جستجو
+                        <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </form></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in icon-mid"></span> ورود</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user icon-mid"></span> عضویت</a></li>
+                </ul>
+              </div>
+             </nav>
+        </header>
+    <section class="container">
+
+      <div class="row">
+      <div class="col-sm-8">
+          <div class="well well-sm RoyaBold" style="background-color: #ffc8b9;border: solid 1px #ff0a00">
+              مهلت پیشنهاد ویژه
+          </div>
+          <!-- Box Shegeft angiz-->
+          <div tal:repeat="page page" class="panel panel-info RoyaBold">
+            <div class="panel-heading">
+                <h4>${page.Pname}</h4>
+            </div>
+            <div class="panel-body">
+                 <img src="${request.static_url('tutorial:templates/img/products/LG.jpg') }" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">
+                <br><br><br>
+            <strong>توضیحات:</strong>${structure:page.tozihat}
+                <br>
+            <strong>قیمت:</strong>${structure:page.price}
+                <br>
+                <strong>وضعیت:</strong>${structure:page.state}
+            </div>
+            <a href="${request.route_url('sabad', id=page.product_id)}">
+               <button class="btn btn-success center-block" style="font-size: 20px">افزودن به سبد خرید</button>
+            </a>
+          </div>
+
+          <div class="panel panel-default text-center RoyaBold">
+            <div class="panel-heading">
+                <h4>جدیدترین محصولات</h4>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-2">
+                      <img src="${request.static_url('tutorial:templates/img/brand/LG-CI3DCMYKSTANDARDBASIC_066E878F47E041D98018A6043E5D076E.jpg') }" class="img-responsive" style="width:100%" alt="Image">
+                      <p>Partner 1</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+      </div>
+      </div>
+
+
+        <footer>
+        <div class="well well-lg RoyaBold" style="background-color: #a0a4a0;color: #ffffff">
+            <h4>۷ روز هفته، ۲۴ ساعته پاسخگوی شما هستیم.</h4>
+            <h4>تلفن تماس: 02333432323</h4>
+            <h5 style="padding-right: 80%">مارا در شبکه های اجتماعی دنبال کنید:</h5>
+            <img class="pull-left"  src="${request.static_url('tutorial:templates/img/icon/glyphicons-social-32-twitter.png') }">
+            <img class="pull-left" style="padding-left: 2px" src="${request.static_url('tutorial:templates/img/icon/glyphicons-social-33-instagram.png') }">
+        </div>
+        </footer>
+
+    </section>
+<script src="${request.static_url('tutorial:templates/bootstrap/jquery-2.2.2.min.js') }"></script>
+<script src="${request.static_url('tutorial:templates/bootstrap/js/bootstrap.min.js') }"></script>
+</body>
+</html>
